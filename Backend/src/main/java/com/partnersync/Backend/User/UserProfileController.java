@@ -16,7 +16,7 @@ public class UserProfileController {
     }
 
     @PostMapping
-    public ResponseEntity<T> createOrUpdateUserProfile(){
+    public ResponseEntity<T> createUserProfile(){
 
     }
 
