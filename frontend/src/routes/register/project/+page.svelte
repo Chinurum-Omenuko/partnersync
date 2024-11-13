@@ -1,12 +1,27 @@
+<script lang="ts">
+	import InfoModal from '$lib/InfoModal.svelte';
+	let showModal = false;
+	function sendProjectForm() {
+		showModal = true;
+	}
+	function closeModal() {
+		showModal = false;
+	}
+</script>
+
+<InfoModal
+	title="Your request has been sent for review"
+	message="Your project has been sent for review to the department of Applied Research "
+	isOpen={showModal}
+	{closeModal}
+/>
 <div class="bg-[#00703C] mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8 overflow-y-scroll h-full">
     <div class="bg-white mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
       <div>
         <h1 class="text-4xl font-bold mb-4">Register your Organization</h1>
-        <hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700" />
+        <hr class="h-px my-8 border-0 bg-[#00703C]" />
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-          mollis turpis id risus tempor, vitae blandit dui aliquet.
-        </p>
+          Please fill out the form with the relevant business information and project ideas to identify a suitable course at Algonquin College for collaboration.        </p>
       </div>
 
       <div>
@@ -123,12 +138,13 @@
             <div class="col-span-full">
               <div class="flex items-center mr-auto">
                   <input checked id="checked-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-                  <label for="checked-checkbox" class="ms-2 text-sm text-gray-900">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </label>
+                  <label for="checked-checkbox" class="ms-2 text-sm text-gray-900">I acknowledge that this information will be made public on the PartnerSync website. </label>
               </div>
             </div>
 
             <div class="col-span-full">
               <button
+              on:click={sendProjectForm}
                 class="ml-auto flex get-started-btn bg-[#EAC117] text-white px-6 py-3 rounded"
               >
                 Submit

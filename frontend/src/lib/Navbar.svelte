@@ -1,17 +1,12 @@
 <script lang="ts">
+    // Add logic to check if is staff or external
+    const isStaff = false
 </script>
 
 <div class="hidden h-full min-w-80 flex-[0.5] bg-white md:block">
-    <div class="inline-flex h-full flex-col items-center justify-center bg-gray-100">
+    <div class="inline-flex h-full flex-col items-center justify-center bg-white w-full">
         <div class="flex flex-col items-center justify-center">
-            <div class="mb-2 w-1/2">
-                <img
-                    src="https://www.creative-tim.com/learning-lab/tailwind-starter-kit/img/team-2-800x800.jpg"
-                    alt="..."
-                    class="h-auto max-w-full rounded-full border-none align-middle shadow"
-                />
-            </div>
-
+        
             <h2 class="text-lg">Position</h2>
             <h1 class="text-2xl font-bold">Staff Name</h1>
         </div>
@@ -79,7 +74,7 @@
             </li>
             <li>
                 <a
-                    href="#"
+                    href="/message"
                     class="group flex items-center rounded-lg p-2 text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
                 >
                     <svg
@@ -98,7 +93,7 @@
             </li>
             <li>
                 <a
-                    href="#"
+                    href={isStaff ? '/register/course' : '/register/project'}
                     class="group flex items-center rounded-lg p-2 text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
                 >
                     <svg
