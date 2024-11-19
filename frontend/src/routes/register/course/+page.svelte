@@ -1,5 +1,5 @@
 <script lang="ts">
-	import InfoModal from '$lib/InfoModal.svelte';
+	import InfoModal from '$lib/Modals/InfoModal.svelte';
 	let showModal = false;
 	function sendCourseForm() {
 		showModal = true;
