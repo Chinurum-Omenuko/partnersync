@@ -1,17 +1,27 @@
 <script lang="ts">
 	import '../app.css';
-	import Header from '$lib/Header.svelte';
-
+	import HeroHeader from '$lib/HeroHeader.svelte';
+	import Footer from '$lib/Footer.svelte';
+	import SignInModal from '$lib/Modals/SignInModal.svelte';
+	import SignUpModal from '$lib/Modals/SignUpModal.svelte';
+	import { modalStore as ModalContext, toggleSignInModal, toggleSignUpModal } from '$lib/context/ModalContext';
+	let {children} = $props();
 
 	
-
-	export let children;
-	export let data;
+	
 
 </script>
 
 
 
-<Header />
+<HeroHeader />
 {@render children()}
+
+<Footer />
 	
+{#if $ModalContext.signIn}
+	<SignInModal />
+{/if}
+{#if $ModalContext.signUp}
+	<SignUpModal toggleSUModal={toggleSignUpModal}/>
+{/if}

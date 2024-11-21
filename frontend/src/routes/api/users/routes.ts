@@ -1,9 +1,12 @@
-import { Router } from '@sveltejs/kit';
+import { json } from '@sveltejs/kit';
 import * as handlers from './handlers';
 
-export const router = Router();
+export const GET = handlers.getCurrentUser;
+export const PUT = handlers.updateUser;
+export const DELETE = handlers.deleteUser;
 
-router.post('/register', handlers.registerUser);
-router.put('/:id', handlers.updateUser);
-router.delete('/:id', handlers.deleteUser);
-router.get('/me', handlers.getCurrentUser);
+// Faculty-specific routes
+export const POST = {
+  expressInterestInProject: handlers.expressInterestInProject,
+  registerCourse: handlers.registerCourse
+};

@@ -1,3 +1,7 @@
+<script>
+    const logo = '../../static/images/white_logo.svg';
+</script>
+
 <footer class="bg-black text-white py-8">
     <div class="footer-content max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start gap-8 px-4">
         <!-- Company and Legal Information -->
@@ -18,8 +22,8 @@
         </div>
 
         <!-- Logo Section -->
-        <div class="footer-logo">
-            <img src="/images/whitelogo.svg" alt="PartnerSync Logo" class="h-16 w-auto">
+        <div class="footer-logo mt-4 md:mt-0 w-80 flex justify-center">
+            <img src={logo} alt="PartnerSync Logo" class="h-32 w-auto md:h-36 lg:h-40">
         </div>
     </div>
 

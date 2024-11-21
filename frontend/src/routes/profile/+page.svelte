@@ -3,6 +3,7 @@
 	import SignOutButton from "clerk-sveltekit/client/SignOutButton.svelte";
 
     let username = '';
+    console.log(user)
 </script>
 
 
