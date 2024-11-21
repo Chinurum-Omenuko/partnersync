@@ -1,11 +1,11 @@
 
 <script lang="ts">
-  const { toggleSUModal } = $props()
-  
-	type RegistrationType = 'faculty' | 'partner' | null;
-	
-	let registrationType = $state<RegistrationType>(null);
-	
+	import SignUp from 'clerk-sveltekit/client/SignUp.svelte';
+
+	import { closeAllModals, modalStore, toggleSignInModal, toggleSignUpModal } from '../context/ModalContext';
+  	type RegistrationType = 'faculty' | 'partner' | null;
+  	let registrationType = $state<RegistrationType>(null);
+
 	function selectRegistrationType(type: RegistrationType) {
 		registrationType = type;
 	}
@@ -13,7 +13,7 @@
 
 	function handleClose() {
 		registrationType = null;
-		toggleSUModal();
+		toggleSignUpModal();
 	}
 </script>
 
@@ -49,13 +49,7 @@
 				<div class="modal-content bg-white p-8 rounded-lg">
 					<h2 class="text-2xl font-bold mb-4">Create your Faculty account</h2>
 					<form class="flex flex-col gap-4">
-						<input type="fname" placeholder="First Name" class="border p-2 rounded">
-						<input type="lname" placeholder="Last Name" class="border p-2 rounded">
-						<input type="course" placeholder="Course" class="border p-2 rounded">
-						<input type="program" placeholder="Program" class="border p-2 rounded">
-						<input type="email" placeholder="Email" class="border p-2 rounded">
-						<input type="password" placeholder="Password" class="border p-2 rounded">
-						<button type="submit" class="bg-[#EAC117] text-white px-4 py-2 rounded">Sign Up</button>
+						<SignUp redirectUrl="/profile" />
 						<button 
 							type="button" 
 							onclick={() => registrationType = null} 
@@ -72,12 +66,7 @@
 				<div class="modal-content bg-white p-8 rounded-lg">
 					<h2 class="text-2xl font-bold mb-4">Create your Partner account</h2>
 					<form class="flex flex-col gap-4">
-						<input type="fname" placeholder="First Name" class="border p-2 rounded">
-						<input type="lname" placeholder="Last Name" class="border p-2 rounded">
-						<input type="orgname" placeholder="Organization Name" class="border p-2 rounded">
-						<input type="email" placeholder="Email" class="border p-2 rounded">
-						<input type="password" placeholder="Password" class="border p-2 rounded">
-						<button type="submit" class="bg-[#EAC117] text-white px-4 py-2 rounded">Sign Up</button>
+						<SignUp redirectUrl="../../profile" />
 						<button 
 							type="button" 
 							onclick={() => registrationType = null} 

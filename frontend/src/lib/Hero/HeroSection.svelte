@@ -1,7 +1,10 @@
 <script>
+	import { toggleSignInModal } from "$lib/context/ModalContext";
+	import HeroHeader from "$lib/HeroHeader.svelte";
+
     const { toggleSUModal } = $props()
 </script>
-
+<HeroHeader toggleSIModal={toggleSignInModal}/>
 <div class="container">
     <section class="hero bg-[#00703C] text-center text-white relative overflow-hidden" style="min-height: 78vh;">
         <!-- Hero Content -->

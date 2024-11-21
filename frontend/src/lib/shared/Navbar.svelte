@@ -3,7 +3,7 @@
     const isStaff = false
 </script>
 
-<div class="hidden h-full min-w-80 flex-[0.5] bg-white md:block">
+<div class="nav hidden h-full min-w-100 flex-[0.5] bg-white md:block">
     <div class="inline-flex h-full flex-col items-center justify-center bg-white w-full">
         <div class="flex flex-col items-center justify-center">
         
@@ -115,3 +115,9 @@
     </div>
 </div>
 
+<style>
+    nav{
+        width: 80vw;
+        flex-basis: 20%;
+    }
+</style>

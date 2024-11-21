@@ -1,5 +1,5 @@
 <script>
-    const logo = '../../static/images/white_logo.svg';
+    const logo = '../../../static/images/white_logo.svg';
 </script>
 
 <footer class="bg-black text-white py-8">
