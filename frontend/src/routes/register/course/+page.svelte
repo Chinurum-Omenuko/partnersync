@@ -7,6 +7,8 @@
 	function closeModal() {
 		showModal = false;
 	}
+  export let data;
+  console.log(data.user)
 </script>
 
 <InfoModal

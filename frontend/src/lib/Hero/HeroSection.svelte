@@ -1,5 +1,5 @@
 <script>
-
+    const { toggleSUModal } = $props()
 </script>
 
 <div class="container">
@@ -9,7 +9,7 @@
             <h1 class="text-4xl font-bold mb-4">PartnerSync</h1>
             <p class="text-l mb-6 max-w-xl mx-auto">PartnerSync is a project matching tool that connects Algonquin faculty, students and external partners. It is used to collaborate, submit project requests, and explore partnership opportunities. 
             </p>
-            <a href="/signin"><button class="get-started-btn bg-[#EAC117] text-white px-6 py-3 rounded">Get Started</button></a>
+            <button class="get-started-btn bg-[#EAC117] text-white px-6 py-3 rounded" onclick={toggleSUModal}>Get Started</button>
         </div>
 
         <!-- Graphic Layer -->
