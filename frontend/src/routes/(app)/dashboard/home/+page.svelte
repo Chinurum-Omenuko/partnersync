@@ -9,6 +9,6 @@
 </script>
 
 
-<h1>Welcome {username} {data.claims.first_name}</h1>
+<h1>Welcome {data.claims.email}</h1>
 <SignedIn let:user />
 <SignOutButton />

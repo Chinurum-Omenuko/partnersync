@@ -26,5 +26,13 @@
 </div>
 
 <style>
+
+    #signInModal{
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.425);
+        z-index: 10000;
+        display: flex;
+    }
     
 </style>
