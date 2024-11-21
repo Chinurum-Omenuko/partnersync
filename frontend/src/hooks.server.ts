@@ -24,6 +24,7 @@ export const handleUser: Handle = async ({event, resolve}) => {
 		user
 	}
 
+	console.log("Logged in event")
 	return resolve(event)
 
 }
