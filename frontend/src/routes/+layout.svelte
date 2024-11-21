@@ -5,8 +5,7 @@
 	import SignInModal from '$lib/Modals/SignInModal.svelte';
 	import SignUpModal from '$lib/Modals/SignUpModal.svelte';
 	import { modalStore as ModalContext, toggleSignInModal, toggleSignUpModal } from '$lib/context/ModalContext';
-	let {children} = $props();
-
+	let children = $props();
 	
 	
 
@@ -15,7 +14,7 @@
 
 
 <HeroHeader />
-{@render children()}
+{@render children.children()}
 
 <Footer />
 	

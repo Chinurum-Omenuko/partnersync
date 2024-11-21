@@ -3,10 +3,10 @@
 	import SignOutButton from "clerk-sveltekit/client/SignOutButton.svelte";
 
     let username = '';
-    console.log(user)
+    export let data
 </script>
 
 
-<h1>Welcome {username}</h1>
+<h1>Welcome {username} {data.user}</h1>
 <SignedIn let:user />
 <SignOutButton />
