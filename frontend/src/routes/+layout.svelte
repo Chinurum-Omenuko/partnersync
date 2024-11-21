@@ -5,22 +5,30 @@
 	import SignInModal from '$lib/Modals/SignInModal.svelte';
 	import SignUpModal from '$lib/Modals/SignUpModal.svelte';
 	import { modalStore as ModalContext, toggleSignInModal, toggleSignUpModal } from '$lib/context/ModalContext';
+<<<<<<< Updated upstream
 	let children = $props();
 	
 	
+=======
+	let {children} = $props();
+
+	
+	
+>>>>>>> Stashed changes
 
 </script>
 
 
 
-<HeroHeader />
-{@render children.children()}
+<HeroHeader toggleSIModal={toggleSignInModal}/>
+{@render children()}
+{#if $ModalContext.signIn}
+	<SignInModal toggleSignInModal={toggleSignInModal}/>
+{/if}
 
 <Footer />
 	
-{#if $ModalContext.signIn}
-	<SignInModal />
-{/if}
+
 {#if $ModalContext.signUp}
 	<SignUpModal toggleSUModal={toggleSignUpModal}/>
 {/if}
