@@ -1,11 +1,14 @@
-import { db } from '$lib/firebase';
+import { db } from '$lib/firebaseClient';
+import { adminFirestore } from '$lib/firebaseServer';
 import { error, type RequestEvent } from '@sveltejs/kit';
+import firebase from 'firebase/compat/app';
+import { collection } from 'firebase/firestore';
 
 export async function POST(request: RequestEvent) {
   const { code, description, name, program, school, skills, staff_name, term } = await request.request.json();
 
   try {
-    const courseRef = await db.collection('courses').add({
+    const courseRef = await adminFirestore.collection('courses').add({
       code,
       description,
       name,
@@ -23,7 +26,10 @@ export async function POST(request: RequestEvent) {
       headers: { 'Content-Type': 'application/json' }
     });
   } catch (error) {
-    throw error(500, { message: 'Failed to add course' });
+    return new Response(JSON.stringify({ success: false }), {
+      status: 500,
+      headers: { 'Content-Type': 'application/json' }
+    });
   }
 }
 

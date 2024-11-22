@@ -13,6 +13,7 @@
 	};
 	function sendCourseForm() {
 		showModal = true;
+		
 		fetch('/api/courses', {
 			method: 'POST',
 			body: JSON.stringify(formData),
@@ -20,15 +21,23 @@
 			'Content-Type': 'application/json'
 			}
 		})
-		.then(response => response.json())
+		.then(response => {
+			if (!response.ok) {
+			throw new Error(`HTTP error! status: ${response.status}`);
+			}
+			return response.json();
+		})
 		.then(data => {
 			console.log('Success:', data);
-			
+			// Handle successful response
 		})
-		.catch((error) => {
-			console.error('Error:', error);
+		.catch(error => {
+			console.error('Error:', error.message || error);
+			console.log('fail');
+			// Additional error handling logic
 		});
 	}
+
 	function closeModal() {
 		showModal = false;
 	}
