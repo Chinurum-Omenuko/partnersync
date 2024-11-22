@@ -46,14 +46,7 @@
 			{#snippet faculty()}
 				<div class="modal-content bg-white p-8 rounded-lg">
 					<h2 class="text-2xl font-bold mb-4">Create your Faculty account</h2>
-					<form class="flex flex-col gap-4">
-						<input type="fname" placeholder="First Name" class="border p-2 rounded">
-						<input type="lname" placeholder="Last Name" class="border p-2 rounded">
-						<input type="course" placeholder="Course" class="border p-2 rounded">
-						<input type="program" placeholder="Program" class="border p-2 rounded">
-						<input type="email" placeholder="Email" class="border p-2 rounded">
-						<input type="password" placeholder="Password" class="border p-2 rounded">
-						<button type="submit" class="bg-[#EAC117] text-white px-4 py-2 rounded">Sign Up</button>
+
 						<button 
 							type="button" 
 							onclick={() => registrationType = null} 
@@ -61,7 +54,7 @@
 						>
 							Back to selection
 						</button>
-					</form>
+					
 				</div>
 			{/snippet}
 			{@render faculty()}
@@ -69,13 +62,7 @@
 			{#snippet partner()}
 				<div class="modal-content bg-white p-8 rounded-lg">
 					<h2 class="text-2xl font-bold mb-4">Create your Partner account</h2>
-					<form class="flex flex-col gap-4">
-						<input type="fname" placeholder="First Name" class="border p-2 rounded">
-						<input type="lname" placeholder="Last Name" class="border p-2 rounded">
-						<input type="orgname" placeholder="Organization Name" class="border p-2 rounded">
-						<input type="email" placeholder="Email" class="border p-2 rounded">
-						<input type="password" placeholder="Password" class="border p-2 rounded">
-						<button type="submit" class="bg-[#EAC117] text-white px-4 py-2 rounded">Sign Up</button>
+			
 						<button 
 							type="button" 
 							onclick={() => registrationType = null} 
@@ -83,7 +70,7 @@
 						>
 							Back to selection
 						</button>
-					</form>
+				
 				</div>
 			{/snippet}
 			{@render partner()}
