@@ -1,8 +1,33 @@
 <script lang="ts">
 	import InfoModal from '$lib/Modals/InfoModal.svelte';
+
 	let showModal = false;
+	let formData = {
+    name: '',
+    course: '',
+    term: '',
+    program: '',
+    school: '',
+    skills: '',
+    description: ''
+	};
 	function sendCourseForm() {
 		showModal = true;
+		fetch('/api/courses', {
+			method: 'POST',
+			body: JSON.stringify(formData),
+			headers: {
+			'Content-Type': 'application/json'
+			}
+		})
+		.then(response => response.json())
+		.then(data => {
+			console.log('Success:', data);
+			
+		})
+		.catch((error) => {
+			console.error('Error:', error);
+		});
 	}
 	function closeModal() {
 		showModal = false;
@@ -40,6 +65,7 @@
 								type="text"
 								name="name"
 								id="name"
+								bind:value={formData.name}
 								autocomplete="name"
 								class="w-full border-0 bg-neutral-100 py-1.5 pl-1 text-gray-900 focus:ring-0 sm:text-sm sm:leading-6"
 							/>
@@ -54,6 +80,7 @@
 								type="text"
 								name="course"
 								id="course"
+								bind:value={formData.course}
 								autocomplete="course"
 								class="block flex-auto rounded-md border-0 bg-neutral-100 py-1.5 pl-1 text-gray-900 focus:ring-0 sm:text-sm sm:leading-6"
 							/>
@@ -68,6 +95,7 @@
 								type="text"
 								name="term"
 								id="term"
+								bind:value={formData.term}
 								autocomplete="term"
 								class="block flex-auto rounded-md border-0 bg-neutral-100 py-1.5 pl-1 text-gray-900 focus:ring-0 sm:text-sm sm:leading-6"
 							/>
@@ -83,6 +111,7 @@
 								type="text"
 								name="program"
 								id="program"
+								bind:value={formData.program}
 								autocomplete="program"
 								class="block flex-auto rounded-md border-0 bg-neutral-100 py-1.5 pl-1 text-gray-900 focus:ring-0 sm:text-sm sm:leading-6"
 							/>
@@ -97,6 +126,7 @@
 								type="text"
 								name="school"
 								id="school"
+								bind:value={formData.school}
 								autocomplete="school"
 								class="block flex-auto rounded-md border-0 bg-neutral-100 py-1.5 pl-1 text-gray-900 focus:ring-0 sm:text-sm sm:leading-6"
 							/>
@@ -112,6 +142,7 @@
 								type="text"
 								name="skills"
 								id="skills"
+								bind:value={formData.skills}
 								autocomplete="skills"
 								class="block flex-auto rounded-md border-0 bg-neutral-100 py-1.5 pl-1 text-gray-900 focus:ring-0 sm:text-sm sm:leading-6"
 							/>
@@ -124,6 +155,7 @@
 							<textarea
 								id="description"
 								name="description"
+								bind:value={formData.description}
 								rows="3"
 								class="text-black-900 block w-full rounded-md border-0 bg-neutral-100 py-1.5 pl-1 shadow-sm focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
 							></textarea>
