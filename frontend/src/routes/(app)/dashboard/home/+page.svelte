@@ -17,13 +17,13 @@
 		<!-- What's New & Profile Grid -->
 		<div class="flex flex-row gap-4">
 			<!-- What's New Section -->
-			<div class="col-span-1 rounded-lg bg-white p-6 md:col-span-2 lg:col-span-2">
+			<div class="col-span-1 rounded-lg bg-white p-6 md:col-span-2 lg:col-span-2 md:w-3/4">
 				<h2 class="mb-4 text-xl font-semibold">What's New</h2>
 				<p class="text-gray-500">Lorem ipsum dolor sit amet...</p>
 			</div>
 
 			<!-- Profile Card -->
-			<div class="col-span-1 rounded-lg bg-white p-6">
+			<div class="col-span-1 rounded-lg bg-white p-6 h-80">
 				<div class="mb-4">
 					<h3 class="text-center text-lg font-bold">Sarah Smith</h3>
 				</div>
@@ -41,21 +41,27 @@
 			<!-- For Medium and Larger Devices: Carousel -->
 			<div class="items-left flex">
 				<!-- Carousel Wrapper -->
-				<div id="carousel" class="flex flex-wrap gap-6">
+				<div id="carousel" class="flex flex-wrap gap-4">
 					<!-- Request Card 1 -->
-					<div class="w-60 shrink-0 rounded-lg bg-white p-6">
+					<div class="w-64 shrink-0 rounded-lg bg-white p-6">
 						<h3 class="text-lg font-semibold">UX/UI Project</h3>
 						<p class="text-sm text-gray-500">
 							Our IMD Level 4 class is seeking a UX/UI Project to take on.
 						</p>
 					</div>
 					<!-- Request Card 2 -->
-					<div class="w-60 shrink-0 rounded-lg bg-white p-6">
+					<div class="w-64 shrink-0 rounded-lg bg-white p-6">
 						<h3 class="text-lg font-semibold">Request Title</h3>
 						<p class="text-sm text-gray-500">Lorem ipsum...</p>
 					</div>
 					<!-- Request Card 3 -->
-					<div class="w-60 shrink-0 rounded-lg bg-white p-6">
+					<div class="w-64 shrink-0 rounded-lg bg-white p-6">
+						<h3 class="text-lg font-semibold">Request Title</h3>
+						<p class="text-sm text-gray-500">Lorem ipsum...</p>
+					</div>
+
+					<!-- Request Card 4 -->
+					<div class="w-64 shrink-0 rounded-lg bg-white p-6">
 						<h3 class="text-lg font-semibold">Request Title</h3>
 						<p class="text-sm text-gray-500">Lorem ipsum...</p>
 					</div>
