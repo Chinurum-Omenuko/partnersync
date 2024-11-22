@@ -5,6 +5,8 @@
 
 	export let data;
 	export let children;
+
+	console.log(data)
 </script>
 
 <Header />

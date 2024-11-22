@@ -48,6 +48,7 @@
 		"@sveltejs/kit": "^2.0.0",
 		"clerk-sveltekit": "^0.4.2",
 		"firebase": "^11.0.2",
+		"svelte-clerk": "^0.4.5",
 		"svelte-modals": "^2.0.0"
 	}
 }
