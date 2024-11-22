@@ -2,9 +2,14 @@
 	import CourseModal from '$lib/Modals/CourseModal.svelte';
 	import mockCourses from './mockCourses';
 	import mockRequestCourses from './mockRequestCourses';
+
+	const { data } = $props();
+
+	console.log('courses', data);
+
 	let courses = $state(mockCourses);
 
-	let isAdmin = $state(true);
+	let isAdmin = $state(data?.claims?.role === 'org:admin' || false);
 	let showModal = $state(false);
 	let course = $state({});
 	let selectedRequestList = $state('register');
@@ -38,7 +43,7 @@
 	}
 </script>
 
-<CourseModal {course} isOpen={showModal} {closeModal} {sendInterest} isAdmin />
+<CourseModal {course} isOpen={showModal} {closeModal} {sendInterest} {isAdmin} />
 <div class="mx-auto h-full max-w-7xl overflow-scroll bg-[#00703C] px-4 py-6 sm:px-6 lg:px-8">
 	<div class="mx-auto max-w-7xl bg-white px-4 py-6 sm:px-6 lg:px-8">
 		<!-- Courses Heading -->

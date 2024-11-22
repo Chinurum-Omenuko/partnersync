@@ -1,5 +1,6 @@
 <script>
 	const { isOpen, closeModal, course, sendInterest, isAdmin } = $props();
+	console.log({ isAdmin });
 </script>
 
 {#if isOpen}
@@ -34,13 +35,19 @@
 						{course.duration}<br />
 						<strong>Staff:</strong><br />
 						{course.staff}<br />
-                    </div>
-                    {#if !isAdmin}
-                    <button onclick={sendInterest} class=" bg-[#EAC117] text-white px-3 py-1 rounded">I'm interested</button>
-                    {:else}
-                    <button onclick={sendInterest} class=" bg-[#EAC117] text-white px-3 py-1 rounded">Confirm Request</button>
-                    <button onclick={sendInterest} class="bg-[#EA1717] text-white px-3 py-1 rounded">Reject Request</button>
-                    {/if}
+					</div>
+					{#if isAdmin}
+						<button onclick={sendInterest} class=" rounded bg-[#EAC117] px-3 py-1 text-white"
+							>Confirm Request</button
+						>
+						<button onclick={sendInterest} class="rounded bg-[#EA1717] px-3 py-1 text-white"
+							>Reject Request</button
+						>
+					{:else}
+						<button onclick={sendInterest} class=" rounded bg-[#EAC117] px-3 py-1 text-white"
+							>I'm interested</button
+						>
+					{/if}
 				</div>
 			</div>
 		</div>
