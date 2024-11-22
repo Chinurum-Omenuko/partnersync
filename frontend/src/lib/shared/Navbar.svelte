@@ -1,7 +1,11 @@
 <script lang="ts">
     // Add logic to check if is staff or external
-    const isStaff = false
-    const isExternal = true
+    const { data } = $props()
+    let isExternal = $state(false)
+    if(data?.claims?.roles === 'Faculty') {
+        isExternal = false
+    }
+
 </script>
 
 <div class="nav hidden h-full min-w-100 flex-[0.5] bg-white md:block">
