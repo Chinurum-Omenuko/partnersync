@@ -46,7 +46,8 @@
 			{#snippet faculty()}
 				<div class="modal-content bg-white p-8 rounded-lg">
 					<h2 class="text-2xl font-bold mb-4">Create your Faculty account</h2>
-
+					<form class="flex flex-col gap-4">
+						<SignUp redirectUrl="/profile" />
 						<button 
 							type="button" 
 							onclick={() => registrationType = null} 
@@ -62,7 +63,8 @@
 			{#snippet partner()}
 				<div class="modal-content bg-white p-8 rounded-lg">
 					<h2 class="text-2xl font-bold mb-4">Create your Partner account</h2>
-			
+					<form class="flex flex-col gap-4">
+						<SignUp redirectUrl="../../profile" />
 						<button 
 							type="button" 
 							onclick={() => registrationType = null} 
