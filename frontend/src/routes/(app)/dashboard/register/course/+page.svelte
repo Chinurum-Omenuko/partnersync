@@ -7,7 +7,7 @@
 	function closeModal() {
 		showModal = false;
 	}
-  export let data../../../../register/course/$types.js;
+  export let data
   console.log(data.user)
 </script>
 

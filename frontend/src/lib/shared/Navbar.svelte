@@ -1,6 +1,7 @@
 <script lang="ts">
     // Add logic to check if is staff or external
     const isStaff = false
+    const isExternal = true
 </script>
 
 <div class="nav hidden h-full min-w-100 flex-[0.5] bg-white md:block">
@@ -14,7 +15,7 @@
         <ul class="space-y-2 font-medium">
             <li>
                 <a
-                    href="#"
+                    href="/dashboard/home"
                     class="group flex items-center rounded-lg p-2 text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
                 >
                     <svg
@@ -36,7 +37,7 @@
             </li>
             <li>
                 <a
-                    href="#"
+                    href="/dashboard/courses"
                     class="group flex items-center rounded-lg p-2 text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
                 >
                     <svg
@@ -53,9 +54,10 @@
                     <span class="ms-3 flex-1 whitespace-nowrap">Courses</span>
                 </a>
             </li>
+            {#if !isExternal }
             <li>
                 <a
-                    href="#"
+                    href="/dashboard/projects"
                     class="group flex items-center rounded-lg p-2 text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
                 >
                     <svg
@@ -72,9 +74,12 @@
                     <span class="ms-3 flex-1 whitespace-nowrap">Projects</span>
                 </a>
             </li>
+            {:else}
+            <div></div>
+            {/if}
             <li>
                 <a
-                    href="/message"
+                    href="/dashboard/message"
                     class="group flex items-center rounded-lg p-2 text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
                 >
                     <svg
@@ -93,7 +98,7 @@
             </li>
             <li>
                 <a
-                    href={isStaff ? '/register/course' : '/register/project'}
+                    href={isExternal ? '/dashboard/register/project' : '/dashboard/register/course'}
                     class="group flex items-center rounded-lg p-2 text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
                 >
                     <svg
