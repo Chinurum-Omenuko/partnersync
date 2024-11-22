@@ -1,7 +1,22 @@
 <script lang="ts">
+	import InfoModal from '$lib/Modals/InfoModal.svelte';
+
+	let showModal = false;
+	function sendEmail() {
+		showModal = true;
+	}
+	function closeModal() {
+		showModal = false;
+	}
 </script>
 
-<div class="mx-auto max-w-7xl bg-[#00703C] px-4 py-6 sm:px-6 lg:px-8 h-full">
+<InfoModal
+	title="Your message has been sent"
+	message="Your message has been sent to the department of Applied Research"
+	isOpen={showModal}
+	{closeModal}
+/>
+<div class="mx-auto h-full max-w-7xl bg-[#00703C] px-4 py-6 sm:px-6 lg:px-8">
 	<div class="mx-auto max-w-7xl bg-white px-4 py-6 sm:px-6 lg:px-8">
 		<div>
 			<h1 class="mb-4 text-4xl font-bold">Message</h1>
@@ -39,7 +54,10 @@
 					</div>
 
 					<div class="col-span-full">
-						<button class="get-started-btn ml-auto flex rounded bg-[#EAC117] px-6 py-3 text-white">
+						<button
+							onclick={sendEmail}
+							class="get-started-btn ml-auto flex rounded bg-[#EAC117] px-6 py-3 text-white"
+						>
 							Submit
 						</button>
 					</div>
