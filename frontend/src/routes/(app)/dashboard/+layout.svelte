@@ -1,7 +1,7 @@
 <script>
+	import { goto } from "$app/navigation";
 	import Header from "$lib/home/Header.svelte";
 	import Navbar from "$lib/shared/Navbar.svelte";
-	import NavMenu from "$lib/shared/NavMenu.svelte";
 
 	export let data;
 	export let children;
@@ -10,10 +10,10 @@
 </script>
 
 <Header />
-<div class="content">
-	<NavMenu />
-	<div class="background">
-
+<div class="flex h-svh max-h-[700px] w-full">
+	<Navbar />
+	<div class="h-full flex-1 bg-[#00703C]">
+		{@render children()}
 	</div>
 	
 </div>
