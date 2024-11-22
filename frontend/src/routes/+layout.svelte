@@ -4,7 +4,8 @@
 	import SignUpModal from '$lib/Modals/SignUpModal.svelte';
 	import { modalStore as ModalContext, toggleSignInModal, toggleSignUpModal } from '$lib/context/ModalContext';
 	import Footer from '$lib/shared/Footer.svelte';
-	let {children} = $props();
+	let {children, data} = $props();
+	console.log(data)
 
 </script>
 
