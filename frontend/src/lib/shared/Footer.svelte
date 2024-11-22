@@ -16,8 +16,7 @@
             <!-- Legal Information -->
             <div class="legal-info mt-4 md:mt-0">
                 <h4 class="text-lg font-bold mb-2">Legal</h4>
-                <p><a href="#" class="text-white hover:text-gray-400">Terms of Service</a></p>
-                <p><a href="#" class="text-white hover:text-gray-400">Privacy Policy</a></p>
+                <p><a href="https://www.algonquincollege.com/policies/privacy/" class="text-white hover:text-gray-400">Privacy Policy</a></p>
             </div>
         </div>
 

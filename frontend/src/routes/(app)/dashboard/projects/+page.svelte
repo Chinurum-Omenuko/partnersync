@@ -10,7 +10,7 @@
 <!-- <div class="flex h-full items-center justify-center overflow-scroll bg-[#00703C] mx-auto"> -->
 <div class="mx-auto h-full max-w-7xl overflow-scroll bg-[#00703C] px-4 py-6 sm:px-6 lg:px-8">
 	<!-- Projects Section -->
-	<div class="mx-auto w-full max-w-4xl space-y-6 rounded-lg bg-white p-8">
+	<div class="mx-auto w-full max-w-7xl space-y-6 bg-white p-8">
 		<!-- Header -->
 		<div>
 			<h1 class="text-3xl font-bold">Projects</h1>
@@ -21,7 +21,7 @@
 		<div class="relative inline-block w-full md:w-auto">
 			<button
                 on:click={() => (displayDropdown = displayDropdown === 'hidden' ? 'block' : 'hidden')}
-				class="inline-flex w-full items-center rounded bg-yellow-400 px-4 py-2 font-semibold text-white md:w-auto"
+				class="inline-flex w-full items-center rounded bg-[#EAC117] px-4 py-2 font-semibold text-white md:w-auto"
 			>
 				<span>Categories</span>
 				<svg class="ml-2 h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
