@@ -40,9 +40,6 @@
 						<button onclick={sendInterest} class=" rounded bg-[#EAC117] px-3 py-1 text-white"
 							>Confirm Request</button
 						>
-						<button onclick={sendInterest} class="rounded bg-[#EA1717] px-3 py-1 text-white"
-							>Reject Request</button
-						>
 					{:else}
 						<button onclick={sendInterest} class=" rounded bg-[#EAC117] px-3 py-1 text-white"
 							>I'm interested</button
